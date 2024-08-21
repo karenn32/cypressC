@@ -1,0 +1,20 @@
+{
+    "registerPage": {
+      "url": "https://conduit.realworld.how/register",
+      "title": "Sign up — Conduit"
+    },
+    "loginPage": {
+      "url": "https://conduit.realworld.how/login",
+      "title": "Sign in — Conduit"
+    },
+    "homePage": {
+      "url": "https://conduit.realworld.how/",
+      "title": "Conduit"
+    },
+
+    "articlePage":{
+        "url": "https://conduit.realworld.how/article/*",
+        "title": "Conduit"
+    }
+  }
+  
