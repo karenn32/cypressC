@@ -29,8 +29,6 @@ When("User clicks on delete article button", () => {
 });
 
 When("User edits article", () => {
-  cy.intercept("GET", "https://api.realworld.io/api/user").as("getUser");
-  cy.wait("@getUser");
   editorPage.createArticle(randomTitle, randomAbout, randomArticle);
 });
 

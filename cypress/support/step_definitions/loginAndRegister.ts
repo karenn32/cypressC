@@ -17,8 +17,6 @@ Given(
 When(
   "User registers with username {string}, email {string} and password {string}",
   (username: string, email: string, password: string) => {
-    cy.intercept("GET", "https://api.realworld.io/api/user").as("getUser");
-    cy.wait("@getUser");
     if (username == "<random_username>") {
       username = generateRandomString(8);
     }
