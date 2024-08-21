@@ -1,2 +1,3 @@
 node_modules/
-cypress.allure.config.ts
+cypress.allure.config.ts/
+cypress\screenshots\

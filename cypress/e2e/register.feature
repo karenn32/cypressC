@@ -29,3 +29,4 @@ Feature: The Conduit registration page
         Given User is located on the 'register' page of Conduit website
         When User registers with username '<random_username>', email '<random_email>' and password '<random_password>'
         Then User should be on 'homePage'
+        And User should see profile picture

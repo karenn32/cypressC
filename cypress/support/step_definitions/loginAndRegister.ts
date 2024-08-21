@@ -17,6 +17,8 @@ Given(
 When(
   "User registers with username {string}, email {string} and password {string}",
   (username: string, email: string, password: string) => {
+    cy.intercept("GET", "https://api.realworld.io/api/user").as("getUser");
+    cy.wait("@getUser");
     if (username == "<random_username>") {
       username = generateRandomString(8);
     }
@@ -55,6 +57,6 @@ Then("User should see profile picture", () => {
 });
 
 When("User navigates to profile page", () => {
-  cy.get('ul.navbar-nav').find('li.nav-item').eq(3).click();
+  cy.get("ul.navbar-nav").find("li.nav-item").eq(3).click();
   cy.url().should("include", "/profile/");
 });
